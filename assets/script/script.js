@@ -13,32 +13,6 @@ function listener(element){
 // =================
 // switch
 
-function mySwitch(){
-    
-    const button = document.getElementById("switch")  
-    const contentA = document.getElementById("switch_contentA")
-    const contentB = document.getElementById("switch_contentB")
-
-    let content = "A"
-
-    button.addEventListener("click", function(){
-
-        if (content == "A"){
-            contentB.style.display = "block"
-            contentA.style.display = "none"
-            content = "B"
-
-            button.textContent = "show A"
-        }
-        else {
-            contentA.style.display = "block"
-            contentB.style.display = "none"
-            content = "A"
-
-            button.textContent = "show B"
-        }
-    })
-}
 
 
 function dropdown(){
@@ -47,12 +21,22 @@ function dropdown(){
 
     dropdown.addEventListener("change", function(){
         let content = dropdown.value
-
+        let id
         figures.forEach(function(a){
             a.style.display = "none"
         })
+        if (content === "USA map of accidents"){
+            id = "dropdown_contentA"
+        }
 
-        let id = "dropdown_content" + content
+        if (content === "New york and nearby States accidents"){
+            id = "dropdown_contentB"
+        }
+        
+        if (content === "New York Accidents per population"){
+            id = "dropdown_contentC"
+        }
+        
         let elem = document.getElementById(id)
         elem.style.display = "block"
     })
