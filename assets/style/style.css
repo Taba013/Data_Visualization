@@ -12,6 +12,15 @@ body {
 }
 /* ---- overal layout  -----*/
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
 .link {
 	margin-left: -1.25em;
 }

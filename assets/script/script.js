@@ -22,6 +22,7 @@ function dropdown(){
     dropdown.addEventListener("change", function(){
         let content = dropdown.value
         let id
+        
         figures.forEach(function(a){
             a.style.display = "none"
         })
@@ -42,6 +43,23 @@ function dropdown(){
     })
 }
 
+function slideImg() {
+  var x = document.getElementById("mySlide");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function slideImg2() {
+    var x = document.getElementById("mySlide1");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
 // =================
 // page load
