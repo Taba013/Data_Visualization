@@ -66,6 +66,7 @@ function slideImg2() {
 
 window.addEventListener("load", function(){
     highlight()
-    mySwitch()
     dropdown()
+    slideImg()
+    slideImg2()
 })
