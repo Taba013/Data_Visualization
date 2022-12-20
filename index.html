@@ -55,7 +55,7 @@
 				<a name="highlight"></a>
 				<div class="download">
 					<div>
-						<a href="assets/dataviz/US_Accidents.zip" title="Download dataset">
+						<a href="assets/dataviz/dataset+metadata.zip" title="Download dataset">
 							↓ Dataset
 						</a>
 					</div>
@@ -68,9 +68,24 @@
 			</section>
 			<article>
 				<section id="abstract">
-					We decided to analyze the data of the US vehicle crashes during the years between 2014 and 2020. 
-					This dataset is provided by the Crash Records Center, from the state of New York.<br>
-					Source: https://data.world/data-ny-gov/e8ky-4vqe 
+					<h4>
+						Introduction
+					</h4>
+					<p>We decided to analyze the data of the US vehicle crashes during the years between 2014 and 2020.<br>
+						The dataset is provided by the Crash Records Center, from the state of New York.<br>
+						Source: https://data.world/data-ny-gov/e8ky-4vqe <br>
+						The main part of this project is the location where the accidents happened and the causes of the accidents.<br>
+						We are going to give some information about which county has the most accidents and give advice base on the causes of the accidents.<br>
+						The purpose of this project is to inform the population about the accidents frequency and to convince people to pay more attention to some aspects of that could cause an accident.
+						</p>
+					<h4>
+						Data pre-processing
+					</h4>
+					<p>To manage our data we combined two datasets, one from the years 2014 to 2016 and one from the year 2019 and 2020.<br>
+						To be able to create our data visualizations we got another dataset containing the counties and their population.<br>
+						Luckily our dataset didn’t contain many empty fields, so we didn’t have to drop any rows.<br>
+						In the end we didn’t have to do a lot of handling to be able to create our data visualizations.
+						</p>
 				</section>
 
 				<section>
@@ -85,29 +100,33 @@
 					</select>
 
 					<figure id="dropdown_contentA" class="figure">
+						<h4>USA map of accidents</h4>
+						<p>The map above shows the total accidents of each countie.<br>
+							As we can notice most of the accidents of our dataset happened in the State of New York and the ones around it</p>
 						<img src="assets/images/USA total accidents.png" alt="USA map of accidents" width="1024" height="1024">
-						<figcaption>USA map of accidents</figcaption>
-						<p>Hello 1</p>
+						
 					</figure>
 
 					<figure id="dropdown_contentB" class="figure" style="display:none">
+						<h4>New york and nearby States accidents</h4>
+						<p>Because of that we decide to take only the accidents that happened in the State of New York and the states around it.</p>
 						<iframe src="assets/images/New Yok Total Accidents.html" seamless alt="New york and nearby States accidents"  width="820" height="550"></iframe>
 						<button onclick="slideImg()">Show top accidents</button>
 						<div id="mySlide" style="display:none">
 							<iframe src="assets/images/Top accidents counties.html" seamless alt="Number of accidents"  width="820" height="650"></iframe>
 						</div>
-						<figcaption>New york and nearby States accidents</figcaption>
-						<p>Hello 3</p>
+						
 					</figure>
 
 					<figure id="dropdown_contentC" class="figure" style="display:none">
+						<h4>New york and nearby States accidents</h4>
+						<p>To give a better idea of the accidents we decide to check the accidents that happened per county population.</p>
 						<iframe src="assets/images/New York Accidents per population.html" seamless alt="New York Accidents per population"  width="820" height="550"></iframe>
 						<button onclick="slideImg2()">Show top accidents</button>
 						<div id="mySlide1" style="display:none">
 							<iframe src="assets/images/Top accidents per population.html" seamless alt="Number of accidents"  width="820" height="750"></iframe>
 						</div>
-						<figcaption>New york and nearby States accidents</figcaption>
-						<p>Hello 3</p>
+						
 					</figure>
 					
 				</section>
@@ -116,6 +135,18 @@
 						Map of the accidents
 					</h4>
 					<iframe src="assets\images\Accidents Condition.html" seamless width="820" height="820"></iframe>
+
+					<h4>
+						Advices to avoid accidents.
+					</h4>
+					<p>
+						As we can notice by the graph above it is possible to find when most accidents happened<br>
+						Thanks to that we can give some advice to when to pay more attention to the driving:<br>
+						- When the road is wet and grade.<br>
+						- When there is snow or ice on the road.<br>
+						- When is dark and there are not lights.<br>
+						- When there is a curve.
+					</p>
 				</section>
 
 			</article>
