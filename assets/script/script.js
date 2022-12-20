@@ -64,9 +64,13 @@ function slideImg2() {
 // =================
 // page load
 
+
 window.addEventListener("load", function(){
     highlight()
+    mySwitch()
     dropdown()
     slideImg()
     slideImg2()
+    imagesFromJSON()
 })
+

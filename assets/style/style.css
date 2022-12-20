@@ -196,6 +196,11 @@ figcaption{
 	padding: 1rem;
 }
 
+iframe[seamless] {
+    width: 500;
+	height: 500;
+}
+
 /* ---- map -----*/
 
 #map01{
