@@ -155,7 +155,6 @@ figcaption{
 }
 a{
 	text-decoration: none;
-	color:black;
 }
 a:hover{
 	text-decoration: underline;
@@ -192,7 +191,6 @@ figcaption{
 	font-size: 1.4rem;
 	line-height: 130%;
 	background-color: #f3f2f2;
-	color: #0F6DBF;
 	padding: 1rem;
 }
 
