@@ -24,22 +24,21 @@ function dropdown(){
         let id
         
         figures.forEach(function(a){
-            a.style.display = "none"
-        })
-        if (content === "USA map of accidents"){
-            id = "dropdown_contentA"
-        }
-
+          a.style.display = "none"
+      })
+        
         if (content === "New york and nearby States accidents"){
-            id = "dropdown_contentB"
+            id = "dropdown_contentA"
         }
         
         if (content === "New York Accidents per population"){
-            id = "dropdown_contentC"
+            id = "dropdown_contentB"
         }
         
         let elem = document.getElementById(id)
         elem.style.display = "block"
+
+        
     })
 }
 

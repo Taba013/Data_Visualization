@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv='cache-control' content='no-cache'> 
-		<meta http-equiv='expires' content='0'> 
-		<meta http-equiv='pragma' content='no-cache'>
 		<title>US Motor Vehicle Crashes</title>
 		<meta name="description"content="Project description">
 		<meta name="author" content="Authors' name and ssurname">
@@ -32,159 +28,183 @@
 		<link rel="stylesheet" type="text/css" href="assets/lib/leaflet_1_7_1.css">
 		<script src="assets/lib/leaflet_1_7_1.js"></script>
 	</head>
-	<body>
-		<div id="topbar">
-			<nav>
-				<div class="go_home">
-					<a href="https://dataviz-supsi.github.io/2022/" title="Go back home">
-						<span>
-							←
-						</span>
-						<span>
-							Data visualization course
-						</span>
-					</a>
-				</div>
-			</nav>
-		</div>
-		<main>
-			<header>
-				<h1>
-					US Motor Vehicle Crashes
-				</h1>
-				<h2>Data analysis of the US vehicle crashes during the years between 2014 and 2020</h2>
-				<h3>by Gabriel Tabacaru, Manuel Romanelli</h3>
-			</header>
-			<section class="no_margin">
-				<a name="highlight"></a>
-				<div class="download">
-					<div>
-						<a href="assets/dataviz/dataset+metadata.zip" title="Download dataset">
-							↓ Dataset
-						</a>
-					</div>
-					<div>
-						<a href="assets/dataviz/visualization-protocol.txt" title="Download visualization protocol">
-							↓ Visualization protocol
-						</a>
-					</div>
-				</div>
-			</section>
-			<article>
-				<section id="abstract">
-					<h4>
-						Introduction and Aim
-					</h4>
-					<p>In our analysis we decided to study the phenomenon of road accidents. <br>
-						We decided to choose this topic to underline their great frequency and importance in the impact of human life.<br>
-						The main part of this project is to show the location where the accidents happened and the causes of the accidents.<br>
-						The purpose of this project is to inform the population about the accidents frequency and to convince people to pay more attention to some aspects of that could cause an accident.<br>
-						Our analysis also aims to make people understand how many mistakes humans can make, in this case while driving, and therefore
-						the importance of finding a solution to reduce the number of annual accidents, through the development of cars thanks to the one of technology and AI.<br>
-					</p>
-					<h4>
-						Source
-					</h4>
-					<p>
-						Being the continent with the most information available, we decided to choose the American continent as the object of our analysis.<br>
-						Having found a very reliable source and being the American territory very vast and diversified, we concentrated most of our analysis in the area next to the county of new york.<br>
-						The dataset that we have considered in our analysis has been provided online as open-source by the Crash Record Center, from the state of New York.<br>
-						<a href="https://data.world/data-ny-gov/e8ky-4vqe">Dataset Link</a>
-					</p>
-					<h4>
-						Data pre-processing
-					</h4>
-					<p>To be able to have a more reliable analysis as close to reality as possible we decided to use more datasets, one from the years 2014 to 2016 and one from the year 2019 and 2020, unoftunately we haven't found the missed years (2017-2018) .<br>
-						Furthermore for the creation of our data visualizations we got another dataset containing the counties coordinates and their population. <br>
-						Fortunately the datasets we used are complete and we have had no managing problems since they don't contain many empty fields, so we could keep all the original data.<br>
-					</p>
-				</section>
+    <body>
+        <body>
+            <div id="topbar">
+                <nav>
+                    <div class="go_home">
+                        <a href="https://dataviz-supsi.github.io/2022/" title="Go back home">
+                            <span>
+                                ←
+                            </span>
+                            <span>
+                                Data visualization course
+                            </span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+                <header>
+                    <h1>
+                        US Motor Vehicle Crashes
+                    </h1>
+                    <h2>Data analysis of the US vehicle crashes during the years between 2014 and 2020</h2>
+                    <h3>by Gabriel Tabacaru, Manuel Romanelli</h3>
+                </header>
+                <section class="no_margin">
+                    <a name="highlight"></a>
+                    <div class="download">
+                        <div>
+                            <a href="assets\dataviz\US_Accidents.zip" title="Download dataset">
+                                ↓ Dataset
+                            </a>
+                        </div>
+                        <div>
+                            <a href="assets\dataviz\Visualization Protocol.pdf" title="Download visualization protocol">
+                                ↓ Visualization protocol
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="abstract">
+                    
+                    <h1 style="text-align: center;">Introduction</h1>
+                    <p style="text-align: center;">Road accidents are a common phenomenon in which a vehicle collides 
+                        with another vehicle, object, or person, causing damage, injury, or death.<br>
+                        These accidents can occur due to various reasons such as driver error, road design, vehicle malfunction, 
+                        weather conditions, and alcohol or drug impairment.<br>
+                        We decide to study this phenomenon since, despite governments around the world have implemented various 
+                        measures to reduce the number of road accidents;<br> road accidents remain a significant problem that can 
+                        negatively affect our life.<br>
+                        With our analysis we aim to understand if this phenomenon is growing, in which areas is more present and what the causes are.
+                    </p>                        
+                
+                </section>    
+                    <h1 style="text-align: center;">Number of Accidents per Year</h1>
+                    <div align='center'>
+                        <iframe src="assets/images/Total_Year_Accidents.html" style="position:right;top:0;width: 825px;height: 450px;"></iframe>
+                    </div>
 
-				<section>
-					<h4>
+                    <section id="abstract" style="text-align: center;">
+                        <p style="text-align: center;">From the graph above we can see that in the first years the car accidents number in USA is remained the same.<br>
+                            From the 2017 to 2018 there is the largest increase in cases of about 100'000;<br>
+                            Then there is a huge drop in 2020 probably because of the lockdown caused by Covid.<br>
+                            In 2021 the numbers started increasing again and this year we expect to reach and even surpass the peak reached in 2019.<br>
+                            The number of crashes in the plot are only from the data of 64 counties present in our dataset.<br>
+                            The United States have 3143 counties with over 6 milion car accidents every year.
+                        </p>
+                    </section>
+                    <div align='center'>
+                        <img src="assets/images/Accidents_Per_Year.png" style="position:right;top:0;width: 875px;height: 450px;"></img>
+                    </div>
+
+                    <section id="abstract" style="text-align: center;">
+                        <p style="text-align: center;">From studying the number of accidents per year we study the behavior of the number of accidents during the different years.<br>
+                            Although we expected some kind of pattern during the busiest months, the graph instead describes a flat situation, constant for most of the year.<br>
+                            The only change recognizable and common to most years is a decrease in the number of accidents during the period between March and May.<br>                            
+                        </p>
+                    </section>
+                <h1 style="text-align: center;">USA map of accidents</h1>
+                <div align='center'>
+                    <iframe src="assets/images/USA total accidents.html" style="position:right;top:0;width: 1000px;height: 500px;"></iframe>
+                </div>
+                <section id="abstract" style="text-align: center;">
+                    <p style="text-align: center;">This map shows the number of total accidents that happened in each county.
+                        <br>The three counties that have the most accidents are: <br>- Queens with 2.270.976 population <br>- Suffolk with 1.481.364 population <br>- Nassau with 1.355.683 population.
+                        <br>We can notice that the area where the data is mainly collected is in the state of New York and the ones near it.
+                        <br>For that reason our next visualization are going to be focused on those areas.
+                    </p>
+                </section>
+                <article>
+                <section>
+					<h1 style="text-align: center;">
 						Map of the accidents
-					</h4>
+					</h1>
 					<a name="dropdown"></a>
-					<select id="myDropdown" class="myDropdown" onchange="dropdown()">
-						<option>USA map of accidents</option>
+					<select id="myDropdown" class="myDropdown" onchange="dropdown()" style="text-align: center;" >
 						<option>New york and nearby States accidents</option>
 						<option>New York Accidents per population</option>
 					</select>
-
-					<figure id="dropdown_contentA" class="figure">
-						<h4>USA map of accidents</h4>
-						<p>The map above shows the total accidents of each countie.<br>
-							As we can notice most of the accidents of our dataset happened in the State of New York and the ones around it</p>
-						<img src="assets/images/USA total accidents.png" alt="USA map of accidents" width="1024" height="1024">
-						
+                </article>    
+                    <figure id="dropdown_contentA" class="figure">
+                        <h2 style="text-align: center;">
+                            New york and nearby States accidents
+                        </h2>
+                        <div align='center'>
+						    <iframe src="assets/images/New Yok Total Accidents.html" style="position:right;top:0;width: 650px;height: 500px;"></iframe>
+                            <iframe src="assets/images/Top accidents counties.html" allowfullscreen style="position:left;top:0;left:0;width: 650px;height: 500px;" ></iframe>
+                        </div>
+                            <section id="abstract" style="text-align: center;">
+                                <p style="text-align: center;">
+						        Going now to study more precisely the counties close to new york we can have a more concrete map.<br>
+                                Through the second graph we can see more clearly which are the areas with the greatest number of accidents.<br>
+                                From the barplot we can see a big difference between the first four counties and the others:
+                                <br>- Nassau with 277'000 cases
+                                <br>- Suffolk with 276'000 cases
+                                <br>- Queens with 231'000 cases
+                                <br>- Kings with about 215'000 cases
+                            </p>
+                            </section>
 					</figure>
+					<figure id="dropdown_contentB" class="figure">
+                        <h2 style="text-align: center;">
+                            New york and nearby States accidents
+                        </h2>
+                        <div align='center'>
+						    <iframe src="assets/images/New York Accidents per population.html" style="position:right;top:0;width:650px;height: 500px;"></iframe>
+					        <iframe src="assets/images/Top accidents per population.html" style="position:left;top:0;left:0;width: 650px;height: 500px;"></iframe>
+                        </div>
+                        
+                        <section id="abstract">
+						    <p style="text-align: center;">To give more accurate analysis of the accidents we decide to check the accidents that happened per county population.
+                            <br>We can notice that the counties with most total accidents per population are:
+                            <br>- Orange with an average of about 2.67 accidents per person
+                            <br>- Sullivan with an average of about 2.60 accidents per person
+                            <br>- Monroe with an average of about 0.77 accidents per person
+                            </p>
 
-					<figure id="dropdown_contentB" class="figure" style="display:none">
-						<h4>New york and nearby States accidents</h4>
-						<p>Because of that we decide to take only the accidents that happened in the State of New York and the states around it.</p>
-						<iframe src="assets/images/New Yok Total Accidents.html" seamless alt="New york and nearby States accidents"  width="820" height="550"></iframe>
-						<button onclick="slideImg()">Show top accidents</button>
-						<div id="mySlide" style="display:none">
-							<iframe src="assets/images/Top accidents counties.html" seamless alt="Number of accidents"  width="820" height="650"></iframe>
-						</div>
-						
+                        </section>
+                        
 					</figure>
-
-					<figure id="dropdown_contentC" class="figure" style="display:none">
-						<h4>New york and nearby States accidents</h4>
-						<p>To give a better idea of the accidents we decide to check the accidents that happened per county population.</p>
-						<iframe src="assets/images/New York Accidents per population.html" seamless alt="New York Accidents per population"  width="820" height="550"></iframe>
-						<button onclick="slideImg2()">Show top accidents</button>
-						<div id="mySlide1" style="display:none">
-							<iframe src="assets/images/Top accidents per population.html" seamless alt="Number of accidents"  width="820" height="750"></iframe>
-						</div>
-						
-					</figure>
-					
-				</section>
-				<section>
-					<h4>
-						Map of the accidents
-					</h4>
-					<iframe src="assets\images\Accidents Condition.html" seamless width="820" height="820"></iframe>
-
-					<h4>
-						Advices to avoid accidents.
-					</h4>
-					<p>
-						As we can notice by the graph above it is possible to find when most accidents happened<br>
-						Thanks to that we can give some advice to when to pay more attention to the driving:<br>
-						- When the road is wet and grade.<br>
-						- When there is snow or ice on the road.<br>
-						- When is dark and there are not lights.<br>
-						- When there is a curve.
-					</p>
 				</section>
 
-			</article>
-			<footer>
-				<section>
-					<div>
-						<strong>US Motor Vehicle Crashes</strong><br/>
-						Data analysis of the US vehicle crashes during the years between 2014 and 2020<br/><br/>
-						Gabriel Tabacaru<br/>
-						Manuel Romanelli
-					</div>
-					<div>
-						<strong>SUPSI</strong><br/>
-						Bachelor in Data Science and Artificial Intelligence<br/>
-						Data visualization course<br/><br/>
-						Teacher: Giovanni Profeta<br/>
-						Academic year: 2022-2023
-					</div>
-				</section>
-			</footer>
-		</main>
+                <h1 style="text-align: center;">
+                    Accidents Condition Sankey Diagram
+                </h1>
+                <div style="position:relative;" align='center'>
+                    <iframe src="assets\images\Accidents Condition.html" allowfullscreen style="position:sticky;right:0;left:0;width: 1250px;height: 575px;"></iframe>
+                </div>
 
-		<script src="assets/script/script.js"></script>
-		<script src="assets/script/map_01.js"></script>
-		<script src="assets/script/map_02.js"></script>
-		<script src="assets/script/map_03.js"></script>
+                    <section id="abstract">
+                        <p style="text-align: center;">To make this visualization we used a Sankey diagram to display the flow between the road descriptor, the lighting conditions and the road surface conditions.</p>
+                        <p style="text-align: center;">As we can notice by the graph, it is possible to find when most accidents happened.</p>
+                        <p style="text-align: center;">Thanks to that we can give some advice to when to pay more attention to the driving:</p>
+                        <p style="text-align: center;">- When the road is wet and grade.
+                            <br>- When there is snow or ice on the road.
+                            <br>- When is dark and there are not lights.
+                            <br>- When there is a curve.
+                            </p>
+                    
+                    </section>
 
-	</body>
-</html>
+
+                <footer>
+                    <section>
+                        <div>
+                            <strong>US Motor Vehicle Crashes</strong><br/>
+                            Data analysis of the US vehicle crashes during the years between 2014 and 2020<br/><br/>
+                            Gabriel Tabacaru<br/>
+                            Manuel Romanelli
+                        </div>
+                        <div>
+                            <strong>SUPSI</strong><br/>
+                            Bachelor in Data Science and Artificial Intelligence<br/>
+                            Data visualization course<br/><br/>
+                            Teacher: Giovanni Profeta<br/>
+                            Academic year: 2022-2023
+                        </div>
+                    </section>
+                </footer>
+
+
+        <script src="assets/script/script.js"></script>
